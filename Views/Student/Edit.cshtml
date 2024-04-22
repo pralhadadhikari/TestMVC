@@ -1,0 +1,44 @@
+﻿@model TestMVC.Models.Student
+
+
+<form method="post" asp-action="Edit">
+    <input asp-for="Id" hidden />
+    <div class="form-group">
+        <label asp-for="FullName"></label>
+        <input asp-for="FullName" class="form-control">
+        <span asp-validation-for="FullName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RollNo"></label>
+        <input asp-for="RollNo" class="form-control">
+        <span asp-validation-for="RollNo"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Class"></label>
+        <input asp-for="Class" class="form-control">
+        <span asp-validation-for="Class"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input type="email" asp-for="Email" class="form-control" placeholder="Enter email">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PhoneNumber"></label>
+        <input asp-for="PhoneNumber" class="form-control">
+        <span asp-validation-for="PhoneNumber"></span>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+
+            <a class="btn mt-2 btn-secondary" asp-action="Index">Back to List</a>
+
+        </div>
+
+        <div class="col-6">
+            <button class="btn mt-2 btn-primary  float-end" type="submit">Update</button>
+        </div>
+
+    </div>
+</form>
