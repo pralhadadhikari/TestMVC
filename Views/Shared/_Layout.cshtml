@@ -3,12 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TestMVC</title>
-    <link href="~/lib/fontawesome/css/fontawesome.min.css" rel="stylesheet" asp-append-version="true" />
+    <title>@ViewData["Title"] - TestMVC</title>   
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TestMVC.styles.css" asp-append-version="true" />
-   
+    <link href="~/lib/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
 </head>
 <body>
@@ -35,6 +34,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">StudentDetail</a>
                         </li>
                     </ul>
+                    <partial name="_LoginPartial"></partial>
                 </div>
             </div>
         </nav>

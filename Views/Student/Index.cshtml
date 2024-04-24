@@ -52,7 +52,7 @@
                     <td>
                         <a class="btn btn-primary" asp-action="AddEdit" asp-route-id="@items.Id"><i title="Edit" class="fas fa-edit"></i></a>
                         <a class="btn btn-secondary" asp-action="Detail" asp-route-id="@items.Id">Detail</a>
-                        <a class="btn btn-danger" asp-action="Remove" asp-route-id="@items.Id">Delete</a>
+                        <a class="btn btn-danger" asp-action="Remove" onclick="return confirm('Are you sure you want to delete')" asp-route-id="@items.Id">Delete</a>
                     </td>
                 </tr>
             }
@@ -62,13 +62,3 @@
     </table>
 </div>
 
-<div class="row">
-    <div class="col-6">
-
-        <a class="btn mt-2 btn-secondary" asp-action="Index">Back to List</a>
-
-    </div>
-
-    
-
-</div>

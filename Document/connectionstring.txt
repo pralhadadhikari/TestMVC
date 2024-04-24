@@ -1,0 +1,16 @@
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=SampleTest;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=false"
+  },
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+ options.UseSqlServer(connectionString));
+
+
+
+ public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions)
+             : base(dbContextOptions)
+        {
+        }
+        public DbSet<Test> Tests{ get; set; }

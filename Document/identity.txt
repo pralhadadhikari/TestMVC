@@ -1,0 +1,18 @@
+For Identity:
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore
+if error during scafolding add this package: 
+Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+AFter Scafolding completed add:
+In layout:
+after <ul><ul/> closing
+ <partial name="_LoginPartial" />
+
+In Program.cs after builder.Services.AddControllersWithViews();
+Add
+builder.Services.AddRazorPages();
+
+In program.cs after app.UseAuthorization();
+add
+app.MapRazorPages();
